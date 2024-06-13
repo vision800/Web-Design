@@ -156,3 +156,15 @@ display: block;
 .section{
     display: none;
 }
+.container-cat{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+table{
+    border: 1px solid black;
+}
+table td{
+    border: 1px solid;
+}
