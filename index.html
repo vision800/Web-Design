@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav>
+     <div>
+        <h3>Gamified</h3>
+     </div>
+     <div class="nav-list">
+        <ul>
+            <li><a href="#" class="active" id="home-link" onclick="handleClick('home-link','home')">Home</a></li>
+            <li><a id="categories-link"  onclick="handleClick( 'categories-link','Categories')">Categories</a></li>
+            <li><a id="about-link" onclick="handleClick('about-link','About')">About</a></li>
+            <li><a  id="contact-link" onclick="handleClick('contact-link','Contact')">Contact</a></li>
+        </ul>
+     </div>
+     <div class="nav-right">
+        <div class="search-bar">
+            <input type="text" placeholder="Search your items..">
+             <p onclick="showSection('search')">Search</p>
+        </div>
+        <button type="signin" ><a onclick="showSection('signin')">Sign In</a></button>
+       
+     </div>
+     <!--
+ <div class="nav-search">
+        <input type="text" class="search" placeholder="Search game items">
+        <h3>Search</h3>
+     </div>
+     -->
+    
+    </nav>
+    <section id="home" class="section">
+        <div class="header-backgroud">
+            <img src="images/backroundimage.webp" alt="">
+        </div>
+          
+           <div class="box-row header-box">
+            <div class="box-col">
+                <h3>Keyboards</h3>
+                <img src="images/keyboardback.jpg" class="img-1">
+                <a href="">Show more</a>
+            </div>
+            <div class="box-col">
+                <h3>Mouses</h3>
+                <img src="images/mouseback.jpg">
+                <a href="">Show more</a>
+            </div>
+            <div class="box-col">
+                <h3>Chairs</h3>
+                <img src="images/gamingchairs.jpg">
+                <a href="">Show more</a>
+            </div>
+            <div class="box-col">
+                <h3>Desks</h3>
+                <img src="images/gamingdesk.jpg">
+                <a href="">Show more</a>
+            </div>
+            <div class="box-col">
+                <h3>Monitors</h3>
+                <img src="images/gamingmonitors.jpg">
+                <a href="">Show more</a>
+            </div>
+           
+         </div>
+    </section>
+    <section id="Categories" class="section active">
+         <div class="container-cat">
+            <div class="box-row header-box">
+                <div class="box-col">
+                    <h3>Keyboards</h3>
+                    <img src="images/keyboardback.jpg" class="img-1">
+                    <p>Sub Categories</p>
+                    <hr>
+                    <ul>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                    </ul>
+                </div>
+                <div class="box-col">
+                    <h3>Mouses</h3>
+                    <img src="images/mouseback.jpg">
+                    <p>Sub Categories</p>
+                    <hr>
+                    <ul>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                    </ul>
+                </div>
+                <div class="box-col">
+                    <h3>Chairs</h3>
+                    <img src="images/gamingchairs.jpg">
+                    <p>Sub Categories</p>
+                    <hr>
+                    <ul>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                    </ul>
+                </div>
+                <div class="box-col">
+                    <h3>Desks</h3>
+                    <img src="images/gamingdesk.jpg">
+                    <p>Sub Categories</p>
+                    <hr>
+                    <ul>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                    </ul>
+                </div>
+                <div class="box-col">
+                    <h3>Monitors</h3>
+                    <img src="images/gamingmonitors.jpg">
+                    <p>Sub Categories</p>
+                    <hr>
+                    <ul>
+                        <li><a>17 Inch</a></li>
+                        <li><a>24 Inch</a></li>
+                        <li><a>27 inch</a></li>
+                        <li><a>32 Inch</a></li>
+                        <li><a>34 Inch</a></li>
+                    </ul>
+                </div>
+               
+             </div>
+         </div>
+    </section>
+    <section id="About" class="section">
+        <h1>About section</h1>
+    </section>
+    <section id="Contact" class="section">
+        <h1>Contact section</h1>
+    </section>
+    <section id="signin" class="section">
+        <h1>Sign in</h1>
+    </section>
+    <section id="search" class="section">
+        <h1>Search section</h1>
+    </section>
+  <!--
+      <div class="header-backgroud">
+        <img src="images/backroundimage.webp" alt="">
+    </div>
+      
+       <div class="box-row header-box">
+        <div class="box-col">
+            <h3>Keyboards</h3>
+            <img src="images/keyboardback.jpg" class="img-1">
+            <a href="">Show more</a>
+        </div>
+        <div class="box-col">
+            <h3>Mouses</h3>
+            <img src="images/mouseback.jpg">
+            <a href="">Show more</a>
+        </div>
+        <div class="box-col">
+            <h3>Chairs</h3>
+            <img src="images/gamingchairs.jpg">
+            <a href="">Show more</a>
+        </div>
+        <div class="box-col">
+            <h3>Desks</h3>
+            <img src="images/gamingdesk.jpg">
+            <a href="">Show more</a>
+        </div>
+        <div class="box-col">
+            <h3>Monitors</h3>
+            <img src="images/gamingmonitors.jpg">
+            <a href="">Show more</a>
+        </div>
+       
+     </div>-->
+    <footer>
+        <h3>Gamified</h3>
+        <h4>CopyRight</h4>
+    </footer>
+    <script  >
+        let homeId = document.getElementById('#home');
+let  CategoriesId = document.getElementById('Categories');
+
+let aboutId = document.getElementById('home');
+
+let contanctId = document.getElementById('home');
+
+const sections = document.querySelectorAll('section');
+const links = document.querySelectorAll('.nav-list ul li a');
+
+//home link
+const home_link = document.getElementById('home-link');
+const cat_link = document.getElementById('categories-link');
+
+function activateLink(link){
+    const linkId= document.getElementById(link);
+    links.forEach(l => l.classList.remove('active'));
+   linkId.classList.add('active');
+}
+ 
+function showSection(section){
+    const sectionId= document.getElementById(section);
+    sections.forEach(s => s.classList.remove('active'));
+  console.log(sectionId);
+    sectionId.classList.add('active');
+}
+ 
+ function handleClick(linkId,sectionId){
+    activateLink(linkId );
+    showSection( sectionId);
+ }
+
+ 
+    </script>
+</body>
+</html>

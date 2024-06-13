@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        body{
+            background-color: rgb(223, 217, 217);
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            background:linear-gradient(to right,rgb(125, 23, 221),rgb(180, 113, 243));
+        }
+        .container{
+            display: flex;
+            background-color: white;
+            align-items: center;
+            align-content: center;
+            border-radius: 15px;
+            margin: auto;
+             
+             width: 50%;
+          box-shadow: 5px 5px 5px rgb(0, 0,0, 0.3);
+            justify-content: center;
+             
+        }
+        .signup-form p{
+            text-align: center;
+            color: rgb(125, 23, 221);
+        }
+        h2{
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #form-group label{
+font-size: 18px;
+        }
+        .container #form-group{
+            
+            margin-top: 15px;
+        }
+         input[type="email"],input[type="password"]{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 3px;
+             
+            border-radius:10px;
+        }
+       button[type="signup"]{
+            padding: 10px;
+           color:white;
+           background:  linear-gradient(to right,rgb(125, 23, 221),rgb(180, 113, 243));
+            width: 100%;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .form-check{
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+           font-size: 16px;
+        }
+       .form-check h5{
+        font-size: 16px;
+       }
+        .container a{
+            text-decoration: none;
+            display: block;
+             text-align: right;
+             padding: 5px;
+        }
+        input[type="checkbox"]{
+            padding: 3px;
+        }
+        .signup-image{
+            flex-basis: 50%;
+            margin-right: 30px;
+
+        }
+        .container .signup-image img{
+            height: 100%;
+             width: 100%;
+             
+            border-radius: 5px 0 0 5px;
+            object-fit:  cover;
+            
+             
+        }
+        .signup-form{
+            flex-basis: 50%;
+           padding: 10px;
+        }
+        .signup-divider{
+            align-items: center;
+            text-align: center;
+        margin-bottom: 10px;
+        }
+       .signup-other{
+       justify-content: center;
+        align-items: center;
+          
+        display: flex;
+        align-content: center;
+       }
+       .signup-other img{
+        width: 25px;
+        margin: 5px 5px;
+       }
+      
+       .sign-account a{
+        color: blueviolet;
+        font-size: 18px;
+       }
+       .sign-account p{
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .separator{
+display: flex;
+align-items: center;
+            text-align: center;
+        }
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #000;
+            margin: 0 10px}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-image">
+ <img src="images/signupImage.jpg">
+
+        </div>
+    <div class="signup-form">
+        <h2>Welcome back!</h2>
+        <p>Start gaming with us!</p>
+        <form>
+            
+            <div id="form-group">
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@gmail.com">
+                
+            </div>
+            <div id="form-group">
+                <label for="password">Password</label>
+                <input type="password" placeholder="*************">
+                
+            </div>
+            <div class="form-check">
+                <input type="checkbox">
+                <h5>Accept terms and conditions</h5>
+            </div>
+            <button type="signup">Sign Up</button>
+            <a href="">Forgot password?</a>
+
+            <div class="signup-divider">
+                 
+                <h4 class="separator">Or</h4>
+                
+            </div>
+            <div class="signup-other">
+                <a href=""><img src="images/googleicon.jpg"></a>
+                <a href=""><img src="images/facebookicon.jpg"></a>
+                <a href=""><img src="images/linkedinicon.jpg"></a>
+            </div>
+          <div class="sign-account">
+            <p>Don't have an account?<a href="form.html">Sign Up</a></p>
+          </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

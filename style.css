@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+     
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    background-color: rgb(33, 26, 51);
+    padding: 20px 20px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    
+}
+
+.nav-search{
+    flex: 1;
+    display: flex;
+align-items: center;
+}
+.search{
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    padding: 8px;
+    margin-left: 20px;
+}
+.nav-search h3{
+    background-color: yellow;
+    align-items: center;
+    padding: 8px;
+    font-size: 14px;
+    border-radius:0 5px 5px 0;
+    color: black;
+}
+.nav-list{
+    margin-left: 30px;
+}
+  ul li {
+    
+    display:  inline-flex;
+     margin-left: 10px;
+     margin-right: 10px;
+    
+}
+.nav-list a:hover, .active{
+    color: rgb(245, 160, 245);
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: rgb(33, 26, 51);
+    padding: 20px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+button[type="signin"]{
+    padding: 10px 20px;
+   color:white;
+   background:  linear-gradient(to right,rgb(125, 23, 221),rgb(180, 113, 243));
+    width: 100%;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+button[type="signin"] a{
+    color: white;
+    text-decoration: none;
+}
+.nav-list ul li a{
+    cursor: pointer;
+     text-decoration: none;
+}
+.header-backgroud img{
+     
+     max-width: 100%;
+     max-height: 100%;
+}
+.box-row{
+display: flex;
+flex-wrap: wrap ;
+ align-content: center;
+ 
+margin: 20px 30px;
+top: 50%;
+z-index: 1;
+ position: absolute;
+
+}
+.box-col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    background-color: white;
+    max-width: 24%;
+    min-width: 200px;
+}
+.box-col a{
+color: blueviolet;
+font-size: 13px;
+font-weight: 500;
+}
+.box-col img{
+    border: 1px solid;
+}
+.header-box{
+    margin-top: -30vh;
+}
+.nav-right{
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+.search-bar input{
+    outline: none;
+    border: none;
+    padding: 9px;
+    border-radius: 20px 0 0 20px;
+}
+.search-bar p{
+    border-radius: 0 20px 20px 0;
+padding: 9px;
+color: white;
+background:  linear-gradient(to right,rgb(125, 23, 221),rgb(180, 113, 243));
+cursor: pointer;
+}
+section{
+    display: flex;
+    height: 100vh;
+     
+  
+}
+.section.active{
+display: block;
+}
+
+.section{
+    display: none;
+}
