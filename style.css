@@ -165,11 +165,14 @@ display: block;
 table{
     border: 1px solid black;
     color: black;
+    border-collapse: collapse;
+
 }
 table td{
     border: 1px solid;
-    
+    padding: 20px;
 }
+ 
 .product-cont{
     display: flex;
      
@@ -226,4 +229,25 @@ table td{
     background-color: red;
     color: white;
     padding: 5px;
+    width: 20%;
+    border-radius: 5px;
+}
+.product-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+   
+}
+.product-table{
+    padding: 10px 4%;
+}
+.product-table table{
+    border-collapse: collapse;
+}
+.product-table td{
+    padding: 10px;
+}
+.product-table .heading{
+    background-color: rgb(204, 197, 197);
 }
