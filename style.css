@@ -174,7 +174,7 @@ table td{
     display: flex;
      
     
-    padding: 15px 20px;
+    padding: 15px 4%;
     background-color: white;
     
     border: 1px solid;
@@ -183,14 +183,47 @@ table td{
 .product-cont ul{
     display: flex;
     overflow-y: hidden;
+
 }
 .image-div img{
-    width: 459px;
-    height: 459px;
+    width: 400px;
+    height: 400px;
 }
 .product-description{
     padding:20px 4%;
     display: flex;
     flex-direction: column;
-    
+     color: black;
+     gap: 15px;
+     flex-wrap: wrap;
+}
+.product-description h4{
+    color: purple;
+}
+.product-description .cart{
+    padding: 10px 20px;
+    color:white;
+    background:  linear-gradient(to right,rgb(125, 23, 221),rgb(180, 113, 243));
+     width: 100%;
+     margin: 5px;
+     border: none;
+     border-radius: 20px;
+     text-align: center;
+     cursor: pointer;
+}
+.product-description .list{
+    padding: 10px 20px;
+    color:black;
+    background:  linear-gradient(to right,rgb(211, 207, 207),rgb(200, 180, 219));
+     width: 100%;
+     margin: 5px;
+     border: none;
+     border-radius: 20px;
+     text-align: center;
+     cursor: pointer;
+}
+.product-description .left-stock{
+    background-color: red;
+    color: white;
+    padding: 5px;
 }
