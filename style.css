@@ -93,13 +93,12 @@ button[type="signin"] a{
 }
 .box-row{
 display: flex;
-flex-wrap: wrap ;
+ justify-content: space-between;
  align-content: center;
+ row-gap: 30px;
+ top:50%;
+ margin-left: 30px;
  
-margin: 20px 30px;
-top: 50%;
-z-index: 1;
- position: absolute;
 
 }
 .box-col{
@@ -120,7 +119,7 @@ font-weight: 500;
     border: 1px solid;
 }
 .header-box{
-    margin-top: -30vh;
+    
 }
 .nav-right{
     display: inline-flex;
@@ -365,7 +364,7 @@ table td{
     }
     .container-pro h1{
         text-align: center;
-        color: black;
+        color: white;
         padding-top: 20px;
     }
     .container-pro .header-box{
@@ -376,21 +375,27 @@ table td{
         cursor: pointer;
     }
     .container-pro{
-        background-color: #8a8686;
+        display: flex;
+        flex-wrap: wrap ;
+         align-content: center;
+         flex-direction: column;
+         gap: 20px;
+         background-color:  rgb(72, 56, 110);
+         justify-content: center;
+         height: 100vh;
+          
     }
     
-.box-row{
+.box-row-key{
     display: flex;
-    flex-wrap: wrap ;
-     align-content: center;
-     
-    margin: 20px 30px;
-    top: 50%;
-    z-index: 1;
-     position: absolute;
+   flex-wrap: wrap;
     
+     background-color: inherit;
+    margin: 20px 30px;
+    
+    justify-content: space-between;
     }
-    .box-col{
+    .box-col-key{
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -398,15 +403,28 @@ table td{
         background-color: white;
         max-width: 24%;
         min-width: 200px;
+        border-radius: 20px;
+        margin-top: 20px;
     }
-    .box-col a{
+    .box-col-key a{
     color: blueviolet;
     font-size: 13px;
     font-weight: 500;
     }
-    .box-col img{
-        border: 1px solid;
+    .box-col-key img{
+     
     }
-    .header-box{
-        margin-top: -30vh;
+    .header-box-key{
+       
     }
+    .box-col-key .cart{
+    padding: 10px 20px;
+    color:white;
+    background:  linear-gradient(to right,rgb(125, 23, 221),rgb(180, 113, 243));
+     width: 100%;
+     margin: 5px;
+     border: none;
+     border-radius: 20px;
+     text-align: center;
+     cursor: pointer;
+}
