@@ -22,10 +22,10 @@
      </div>
      <div class="nav-right">
         <div class="search-bar">
-            <input type="text" placeholder="Search your items..">
-             <p onclick="showSection('search')">Search</p>
+            <input type="text" placeholder="Search your items.." id="searchBar">
+             <p  onclick="handleSearch('search-box')" id="search">Search</p>
         </div>
-        <button type="signin" ><a onclick="showSection('signin')">Sign In</a></button>
+        <button type="signin" ><a href="signin.html">Sign In</a></button>
        
      </div>
      <!--
@@ -45,7 +45,7 @@
             <div class="box-col">
                 <h3>Keyboards</h3>
                 <img src="images/keyboardback.jpg" class="img-1">
-                <a href="">Show more</a>
+                <a href="" onclick="showSection('Keyboards')">Show more</a>
             </div>
             <div class="box-col">
                 <h3>Mouses</h3>
@@ -147,7 +147,7 @@
                     <th><div class="box-col-tab">
                         
                         <img src="images/keyboardback.jpg" class="img-1">
-                        <h3>Keyboards</h3>
+                        <h3 onclick="showSection('Keyboards')">Keyboards</h3>
                     </div></th>
                   <th>  <div class="box-col-tab">
                    
@@ -258,13 +258,17 @@
     <section id="Contact" class="section">
         <h1>Contact section</h1>
     </section>
-    <section id="signin" class="section">
-        <h1>Sign in</h1>
+    
+    <section id="search-box" class="section">
+        <div class="container">
+            <h1>Search results for </h1>
+            <hr>
+            <ul id="productList">
+                <!-- The product items will be generated here dynamically -->
+            </ul>
+        </div>
     </section>
-    <section id="search" class="section">
-        <h1>Search section</h1>
-    </section>
-    <section id="product" class="section active">
+    <section id="product" class="section">
          <div class="product-column">
             <div class="product-cont">
                 <div class="image-div">
@@ -319,6 +323,58 @@
             </div>
          </div>
     </section>
+ 
+    <section id="Keyboards" class="section active">
+       
+   <div class="container-pro">
+  <div>  <h1> Buy Quality Keyboards</h1></div>
+    <div class="box-row header-box">
+        <div class="box-col">
+            <img src="images/board1.jpg">
+            <h3>Membrane keyboard</h3>
+            <h4>R1600</h4>
+            <p class="cart">Add to Cart</p>
+        </div>
+        <div class="box-col">
+            
+            <img src="images/board2.jpg">
+            <h3>Mechanical</h3>
+            <h4>R1500</h4>
+            <p class="cart">Add to Cart</p>
+        </div>
+        <div class="box-col">
+            <img src="images/board3.jpg">
+            <h3>Wireless</h3>
+            <h4>R1500</h4>
+            <p class="cart">Add to Cart</p>
+        </div>
+        <div class="box-col">
+            <img src="images/board4.jpg">
+            <h3>Wired</h3>
+            <h4>R1500</h4>
+            <p class="cart">Add to Cart</p>
+        </div>
+        <div class="box-col">
+            <img src="images/board5.jpg">
+            <h3>Wired/wireless</h3>
+            <h4>R1400</h4>
+            <p class="cart">Add to Cart</p>
+        </div>
+        <div class="box-col">
+            <img src="images/board6.jpg">
+            <h3>Mechanical/Wireless</h3>
+            <h4>R1700</h4>
+            <p class="cart">Add to Cart</p>
+        </div>
+        <div class="box-col">
+            <img src="images/board7.jpg">
+            <h3>Mouses</h3>
+            <h4>R800</h4>
+            <p class="cart">Add to Cart</p>
+        </div>
+   </div>
+    </section>
+    
   <!--
       <div class="header-backgroud">
         <img src="images/backroundimage.webp" alt="">
@@ -389,8 +445,100 @@ function showSection(section){
     showSection( sectionId);
  }
 
+ const products = [
+        { name: 'Apple iPhone', model: '13 Pro', price: '$999' },
+        { name: 'Samsung Galaxy', model: 'S21', price: '$799' },
+        { name: 'Google Pixel', model: '6 Pro', price: '$899' },
+        { name: 'OnePlus', model: '9', price: '$729' },
+        { name: 'Sony Xperia', model: '5 III', price: '$999' }
+    ];
+    const searchBar = document.getElementById('searchBar');
+    const productList = document.getElementById('productList');
+const searchButton = document.getElementById('search');
+ document.addEventListener('DOMContentLoaded', () => {
+    const products = [
+        { name: 'Apple iPhone', model: '13 Pro', price: '$999' },
+        { name: 'Samsung Galaxy', model: 'S21', price: '$799' },
+        { name: 'Google Pixel', model: '6 Pro', price: '$899' },
+        { name: 'OnePlus', model: '9', price: '$729' },
+        { name: 'Sony Xperia', model: '5 III', price: '$999' }
+    ];
 
- 
+    const searchBar = document.getElementById('searchBar');
+    const productList = document.getElementById('productList');
+const searchButton = document.getElementById('search');
+    // Function to display products
+    function displayProducts(products) {
+        productList.innerHTML = '';
+
+        products.forEach(product => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="product-name">${product.name}</div>
+                <div class="product-model">${product.model}</div>
+                <div class="product-price">${product.price}</div>
+            `;
+            productList.appendChild(li);
+        });
+    }
+    function displayProducts(products) {
+        productList.innerHTML = '';
+
+        products.forEach(product => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="product-name">${product.name}</div>
+                <div class="product-model">${product.model}</div>
+                <div class="product-price">${product.price}</div>
+            `;
+            productList.appendChild(li);
+        });
+    }
+    // Initial display of all products
+    displayProducts(products);
+
+    // Filter products based on search term
+    searchButton.addEventListener('click', () => {
+        const searchTerm = searchBar.value.toLowerCase();
+        const filteredProducts = products.filter(product => {
+            return (
+                product.name.toLowerCase().includes(searchTerm) ||
+                product.model.toLowerCase().includes(searchTerm) ||
+                product.price.toLowerCase().includes(searchTerm)
+            );
+        });
+        displayProducts(filteredProducts);
+    });
+});
+function displayProducts(products) {
+        productList.innerHTML = '';
+
+        products.forEach(product => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="product-name">${product.name}</div>
+                <div class="product-model">${product.model}</div>
+                <div class="product-price">${product.price}</div>
+            `;
+            productList.appendChild(li);
+        });
+    }
+function searchNow(){
+    const searchTerm = searchBar.value.toLowerCase();
+        const filteredProducts = products.filter(product => {
+            return (
+                product.name.toLowerCase().includes(searchTerm) ||
+                product.model.toLowerCase().includes(searchTerm) ||
+                product.price.toLowerCase().includes(searchTerm)
+            );
+        });
+        displayProducts(filteredProducts);
+    
+}
+function handleSearch(sectionId){
+    showSection(sectionId);
+    searchNow();
+}
     </script>
 </body>
 </html>

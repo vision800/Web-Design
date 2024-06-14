@@ -322,3 +322,91 @@ table td{
         align-items: center;
         justify-content: center;
     }
+    #productList {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    #productList li {
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 5px;
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .product-name {
+        font-weight: bold;
+    }
+    
+    .product-model {
+        font-style: italic;
+        color: #555;
+    }
+    
+    .product-price {
+        color: green;
+        font-weight: bold;
+    }
+    .box-col .cart{
+        padding: 10px 20px;
+        color:white;
+        background:  linear-gradient(to right,rgb(125, 23, 221),rgb(180, 113, 243));
+         width: 100%;
+         margin: 5px;
+         border: none;
+         border-radius: 20px;
+         text-align: center;
+         cursor: pointer;
+    }
+    .box-col{
+        color: black;
+        border-radius: 5px;
+    }
+    .container-pro h1{
+        text-align: center;
+        color: black;
+        padding-top: 20px;
+    }
+    .container-pro .header-box{
+        background-color: white;
+    }
+    .box-col-tab   h3{
+        color: purple;
+        cursor: pointer;
+    }
+    .container-pro{
+        background-color: #8a8686;
+    }
+    
+.box-row{
+    display: flex;
+    flex-wrap: wrap ;
+     align-content: center;
+     
+    margin: 20px 30px;
+    top: 50%;
+    z-index: 1;
+     position: absolute;
+    
+    }
+    .box-col{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+        background-color: white;
+        max-width: 24%;
+        min-width: 200px;
+    }
+    .box-col a{
+    color: blueviolet;
+    font-size: 13px;
+    font-weight: 500;
+    }
+    .box-col img{
+        border: 1px solid;
+    }
+    .header-box{
+        margin-top: -30vh;
+    }
