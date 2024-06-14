@@ -54,10 +54,13 @@ align-items: center;
 }
 
 footer{
+    display: flex;
     text-align: center;
     color: white;
     background-color: rgb(33, 26, 51);
     padding: 20px;
+    justify-content: space-between;
+  
 }
 
 .buttons{
@@ -251,3 +254,71 @@ table td{
 .product-table .heading{
     background-color: rgb(204, 197, 197);
 }
+.container-cat{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    max-width: 100%;
+    min-width: 300px;
+    
+    
+}
+.about-cont{
+
+  display: flex;
+    flex-wrap: wrap ;
+     align-content: center;
+     flex-direction: column;
+     gap: 20px;
+     background-color:  rgb(72, 56, 110);
+     justify-content: center;
+     height: 100vh;
+      
+}
+.box-row-about{
+    display: flex;
+    flex-wrap: wrap ;
+     align-content: center;
+     margin-left: 10px;
+    margin: 20px 30px;
+ 
+    
+    
+    }
+    .box-col-about{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+        background-color: white;
+        max-width: 24%;
+        min-width: 200px;
+        margin-left: 40px;
+        color: black;
+        border-radius: 20px;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+        align-items: center;
+        max-width: 50%;
+        min-width: 200px;
+        margin-left: 40px;
+        color: black;
+        justify-content: center;
+        align-content: center;
+         margin-left: 30%;
+    }
+    .desc-div{
+        margin-top: 20px;
+      
+        color: black;
+    }
+    .title-div{
+        align-items: center;
+        justify-content: center;
+    }
